@@ -20,3 +20,6 @@ The Binary value of decimal no. 57 is : 111001
 Enter a decimal number : -1
 
 The program stope.*/
+
+#include <iostream>
+using namespace std;
