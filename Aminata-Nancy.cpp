@@ -22,4 +22,32 @@ Enter a decimal number : -1
 The program stope.*/
 
 #include <iostream>
-using namespace std;
+void convertToBinary(int num) {
+    if (num== 0) {
+        return;
+    
+    }
+    convertToBinary(num /2);
+    std:: cout << (num% 2);
+
+}
+
+int main () { 
+    int input;
+    while (true) { 
+        std::cout<< "Enter a decimal number (16 or 66): ";
+        std::cin >> input; 
+
+        if (input== -1) { 
+            std:: cout << "The program stops." << std::endl;
+            break;
+         }
+         if (input !=16 && input != 66) {
+            std::cout <<"Please enter either 16 or 66." << std::endl;
+            continue;
+         }
+         std::cout <<"The binary value of decimal no. "<< input << " is: ";
+         convertToBinary(input) ;
+         std::cout<<std::endl;
+    }
+} Return 0;
